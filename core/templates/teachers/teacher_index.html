@@ -9,7 +9,7 @@
     <table class="table table-hover">
         <thead>
             <tr>
-                <th>#</th>
+                <th>SN . no. </th>
                 <th>Full name</th>
                 <th>email</th>
                 <th>Contact</th>
@@ -23,9 +23,9 @@
                 <td>{{teacher.full_name}}</td>
                 <td>{{teacher.email}}</td>
                 <td>{{teacher.phone_no}}</td>
-                <td><a href="#">View</a></td>
-                <td><a href="#">Edit</a></td>
-                <td><a href="#">Delete</a></td>
+                <td><a href="{%url ;teacher.detail% teacher.id}"><i class="fa-solid fa-eye"></i></a></td>
+                <td><a href="{%url ;teacher.delete% teacher.id}"><i class="fa-solid fa-pen"></i></a></td>
+                <td><a href="{%url ;teacher.update% teacher.id}"><i class="fa-solid fa-trash"></i></a></td>
             </tr>
             {% endfor %}
         </tbody>
