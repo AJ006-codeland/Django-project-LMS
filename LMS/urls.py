@@ -1,5 +1,5 @@
 """
-URL configuration for LMS project.
+URL configuration for lms project.
 
 The `urlpatterns` list routes URLs to views. For more information please see:
     https://docs.djangoproject.com/en/5.2/topics/http/urls/
@@ -20,4 +20,6 @@ from django.urls import path, include
 urlpatterns = [
     path('admin/', admin.site.urls),
     path('', include('core.urls')),
+    path('accounts/',include('accounts.urls')),
+    path('account/', include('django.contrib.auth.urls')),
 ]

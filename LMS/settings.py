@@ -26,8 +26,9 @@ SECRET_KEY = 'django-insecure-fin%=f3)#o$mg1hw=jzoedkeu$3wfkv5oe!(dq0ek_k$t1ceu)
 DEBUG = True
 
 ALLOWED_HOSTS = []
-
-
+# login and logout redirect to profile page
+LOGIN_REDIRECT_URL= 'profile'
+LOGOUT_REDIRECT_URL= 'login'
 # Application definition
 
 INSTALLED_APPS = [
@@ -41,6 +42,7 @@ INSTALLED_APPS = [
     'core',
     'LMS',
     'django_bootstrap5',
+    'accounts',
 ]
 
 MIDDLEWARE = [
@@ -123,7 +125,7 @@ USE_TZ = True
 # https://docs.djangoproject.com/en/5.2/howto/static-files/
 
 STATIC_URL = 'static/'
-STATICFILES_DIRS= [BASE_DIR / 'static']
+STATICFILES_DIRS = [BASE_DIR / 'static']
 
 # Default primary key field type
 # https://docs.djangoproject.com/en/5.2/ref/settings/#default-auto-field
